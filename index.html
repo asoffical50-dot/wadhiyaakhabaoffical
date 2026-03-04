@@ -332,173 +332,163 @@
                                 <button class="add-to-cart-btn" onclick="addToCart('next-cola', 'Next Cola', 220)"><i
                                         class="fa-solid fa-cart-shopping"></i> Add</button>
                             </div>
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('hot_dog_preview.png');">
-                                </div>
-                                <div class="item-content">
-                                    <h4>Hot Dog <span class="badge-small">Grilled</span></h4>
-                                    <p class="price">Rs. 300 <span class="unit"></span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn" onclick="changeQty('hot-dog', -1)">-</button>
-                                            <input type="text" id="qty-hot-dog" class="qty-input" value="1" readonly>
-                                            <button class="qty-btn" onclick="changeQty('hot-dog', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('hot-dog', 'Hot Dog', 300)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- Frozen Products -->
-                    <div class="menu-category">
-                        <h3 class="category-title"><i class="fa-solid fa-snowflake"></i> Frozen Products</h3>
-                        <div class="menu-grid">
-                            <!-- Frozen Samosas -->
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
-                                <div class="item-content">
-                                    <h4>Frozen Mini Alu Samosa</h4>
-                                    <p class="price">Rs. 300 <span class="unit">(per dozen)</span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-alu-samosa', -1)">-</button>
-                                            <input type="text" id="qty-frozen-alu-samosa" class="qty-input" value="1"
-                                                readonly>
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-alu-samosa', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('frozen-alu-samosa', 'Frozen Mini Alu Samosa (12pcs)', 300)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
-                                <div class="item-content">
-                                    <h4>Frozen Vegetable Samosa</h4>
-                                    <p class="price">Rs. 400 <span class="unit">(per dozen)</span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-veg-samosa', -1)">-</button>
-                                            <input type="text" id="qty-frozen-veg-samosa" class="qty-input" value="1"
-                                                readonly>
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-veg-samosa', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('frozen-veg-samosa', 'Frozen Veg Samosa (12pcs)', 400)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
-                                <div class="item-content">
-                                    <h4>Frozen Chicken Samosa</h4>
-                                    <p class="price">Rs. 500 <span class="unit">(per dozen)</span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-chk-samosa', -1)">-</button>
-                                            <input type="text" id="qty-frozen-chk-samosa" class="qty-input" value="1"
-                                                readonly>
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-chk-samosa', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('frozen-chk-samosa', 'Frozen Chicken Samosa (12pcs)', 500)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Frozen Rolls -->
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
-                                <div class="item-content">
-                                    <h4>Frozen Mini Alu Roll</h4>
-                                    <p class="price">Rs. 300 <span class="unit">(per dozen)</span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-alu-roll', -1)">-</button>
-                                            <input type="text" id="qty-frozen-alu-roll" class="qty-input" value="1"
-                                                readonly>
-                                            <button class="qty-btn" onclick="changeQty('frozen-alu-roll', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('frozen-alu-roll', 'Frozen Mini Alu Roll (12pcs)', 300)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
-                                <div class="item-content">
-                                    <h4>Frozen Vegetable Roll</h4>
-                                    <p class="price">Rs. 400 <span class="unit">(per dozen)</span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-veg-roll', -1)">-</button>
-                                            <input type="text" id="qty-frozen-veg-roll" class="qty-input" value="1"
-                                                readonly>
-                                            <button class="qty-btn" onclick="changeQty('frozen-veg-roll', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('frozen-veg-roll', 'Frozen Veg Roll (12pcs)', 400)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
-                                <div class="item-content">
-                                    <h4>Frozen Chicken Roll</h4>
-                                    <p class="price">Rs. 500 <span class="unit">(per dozen)</span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn"
-                                                onclick="changeQty('frozen-chk-roll', -1)">-</button>
-                                            <input type="text" id="qty-frozen-chk-roll" class="qty-input" value="1"
-                                                readonly>
-                                            <button class="qty-btn" onclick="changeQty('frozen-chk-roll', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('frozen-chk-roll', 'Frozen Chicken Roll (12pcs)', 500)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Frozen Shami -->
-                            <div class="menu-item-card">
-                                <div class="item-img" style="background-image: url('frozen-shami.jpg');"></div>
-                                <div class="item-content">
-                                    <h4>Frozen Shami Kabab</h4>
-                                    <p class="price">Rs. 1000 <span class="unit">(per dozen)</span></p>
-                                    <div class="cart-controls">
-                                        <div class="qty-bar">
-                                            <button class="qty-btn" onclick="changeQty('frozen-shami', -1)">-</button>
-                                            <input type="text" id="qty-frozen-shami" class="qty-input" value="1"
-                                                readonly>
-                                            <button class="qty-btn" onclick="changeQty('frozen-shami', 1)">+</button>
-                                        </div>
-                                        <button class="add-to-cart-btn"
-                                            onclick="addToCart('frozen-shami', 'Frozen Shami (12pcs)', 1000)"><i
-                                                class="fa-solid fa-cart-shopping"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+            </div>
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-hotdog"></i> Meals & Sides</h3>
+                <div class="menu-grid">
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('hot_dog_preview.png');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Hot Dog <span class="badge-small">Grilled</span></h4>
+                            <p class="price">Rs. 300 <span class="unit"></span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('hot-dog', -1)">-</button>
+                                    <input type="text" id="qty-hot-dog" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('hot-dog', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('hot-dog', 'Hot Dog', 300)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frozen Products -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-snowflake"></i> Frozen Products</h3>
+                <div class="menu-grid">
+                    <!-- Frozen Samosas -->
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Mini Alu Samosa</h4>
+                            <p class="price">Rs. 300 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-samosa', -1)">-</button>
+                                    <input type="text" id="qty-frozen-alu-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-alu-samosa', 'Frozen Mini Alu Samosa (12pcs)', 300)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Vegetable Samosa</h4>
+                            <p class="price">Rs. 400 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-samosa', -1)">-</button>
+                                    <input type="text" id="qty-frozen-veg-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-veg-samosa', 'Frozen Veg Samosa (12pcs)', 400)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Chicken Samosa</h4>
+                            <p class="price">Rs. 500 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-samosa', -1)">-</button>
+                                    <input type="text" id="qty-frozen-chk-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-chk-samosa', 'Frozen Chicken Samosa (12pcs)', 500)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Frozen Rolls -->
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Mini Alu Roll</h4>
+                            <p class="price">Rs. 300 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-roll', -1)">-</button>
+                                    <input type="text" id="qty-frozen-alu-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-alu-roll', 'Frozen Mini Alu Roll (12pcs)', 300)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Vegetable Roll</h4>
+                            <p class="price">Rs. 400 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-roll', -1)">-</button>
+                                    <input type="text" id="qty-frozen-veg-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-veg-roll', 'Frozen Veg Roll (12pcs)', 400)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Chicken Roll</h4>
+                            <p class="price">Rs. 500 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-roll', -1)">-</button>
+                                    <input type="text" id="qty-frozen-chk-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-chk-roll', 'Frozen Chicken Roll (12pcs)', 500)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Frozen Shami -->
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-shami.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Shami Kabab</h4>
+                            <p class="price">Rs. 1000 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-shami', -1)">-</button>
+                                    <input type="text" id="qty-frozen-shami" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-shami', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-shami', 'Frozen Shami (12pcs)', 1000)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- 3. Our Hygiene Promise -->
