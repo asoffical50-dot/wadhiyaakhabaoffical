@@ -317,6 +317,30 @@
                         </div>
                     </div>
                     <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('hot_dog_preview.png');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Hot Dog <span class="badge-small">Grilled</span></h4>
+                            <p class="price">Rs. 300 <span class="unit"></span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('hot-dog', -1)">-</button>
+                                    <input type="text" id="qty-hot-dog" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('hot-dog', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('hot-dog', 'Hot Dog', 300)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cold Drinks Section -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-glass-water"></i> Cold Drinks</h3>
+                <div class="menu-grid">
+                    <div class="menu-item-card">
                         <div class="item-img"
                             style="background-image: url('450c6b233460363.Y3JvcCwyMDQ4LDE2MDEsMCwyMjM.jpg');">
                         </div>
@@ -330,23 +354,6 @@
                                     <button class="qty-btn" onclick="changeQty('next-cola', 1)">+</button>
                                 </div>
                                 <button class="add-to-cart-btn" onclick="addToCart('next-cola', 'Next Cola', 220)"><i
-                                        class="fa-solid fa-cart-shopping"></i> Add</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item-card">
-                        <div class="item-img" style="background-image: url('hot_dog_preview.png');">
-                        </div>
-                        <div class="item-content">
-                            <h4>Hot Dog <span class="badge-small">Grilled</span></h4>
-                            <p class="price">Rs. 300 <span class="unit"></span></p>
-                            <div class="cart-controls">
-                                <div class="qty-bar">
-                                    <button class="qty-btn" onclick="changeQty('hot-dog', -1)">-</button>
-                                    <input type="text" id="qty-hot-dog" class="qty-input" value="1" readonly>
-                                    <button class="qty-btn" onclick="changeQty('hot-dog', 1)">+</button>
-                                </div>
-                                <button class="add-to-cart-btn" onclick="addToCart('hot-dog', 'Hot Dog', 300)"><i
                                         class="fa-solid fa-cart-shopping"></i> Add</button>
                             </div>
                         </div>
