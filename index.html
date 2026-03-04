@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wadiya Khaba - Home of Pure Taste</title>
+    <meta name="description"
+        content="Wadiya Khaba laaya hai 100% homemade, fresh aur hygienic snacks jo aapka dil jeet lein.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <!-- Using an img tag for the uploaded logo -->
+                <img src="LOGO-removebg-preview.png" alt="Wadiya Khaba Logo" class="logo-img"
+                    onerror="this.outerHTML='<h1>Wadiya Khaba</h1>';">
+            </div>
+            <!-- Professional Search Bar -->
+            <form class="search-container" onsubmit="event.preventDefault(); handleSearchSubmit();">
+                <input type="text" id="menu-search" placeholder="Search our premium menu..." onkeyup="searchMenu()"
+                    required>
+                <button type="submit" aria-label="Search and Notify"><i class="fa-solid fa-search"></i></button>
+            </form>
+            <a href="https://wa.me/923701431247" class="btn-primary nav-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge">100% Homemade</span>
+            <h1 class="hero-title">Ghar Ka Zaiqa,<br>Mukammal Safai Ke Sath!</h1>
+            <p class="hero-subtitle">Wadiya Khaba laaya hai 100% homemade, fresh aur hygienic snacks jo aapka dil jeet
+                lein.</p>
+            <div class="hero-actions">
+                <a href="https://wa.me/923701431247" class="btn-primary btn-large" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
+                </a>
+                <a href="#menu" class="btn-secondary btn-large">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. The Menu (Grid Style with Live Prices) -->
+    <section id="menu" class="menu-section py-large bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Premium Menu</h2>
+                <div class="divider"></div>
+                <p>Authentic flavors crafted with love and highest hygiene standards.</p>
+            </div>
+
+            <!-- Samosa Hub -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-cookie"></i> Samosa Hub</h3>
+                <div class="menu-grid">
+                    <div class="menu-item-card">
+                        <span class="premium-badge">Bestseller</span>
+                        <div class="item-img" style="background-image: url('mini-alu-samosa.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Mini Alu Samosa</h4>
+                            <p class="price">Rs. 30 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('mini-alu-samosa', -1)">-</button>
+                                    <input type="text" id="qty-mini-alu-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('mini-alu-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('mini-alu-samosa', 'Mini Alu Samosa', 30)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('vegetable-samosa.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Vegetable Samosa</h4>
+                            <p class="price">Rs. 40 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('vegetable-samosa', -1)">-</button>
+                                    <input type="text" id="qty-vegetable-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('vegetable-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('vegetable-samosa', 'Vegetable Samosa', 40)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('chicken-samosa.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Chicken Samosa</h4>
+                            <p class="price">Rs. 50 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('chicken-samosa', -1)">-</button>
+                                    <input type="text" id="qty-chicken-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('chicken-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('chicken-samosa', 'Chicken Samosa', 50)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roll Station -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-drumstick-bite"></i> Roll Station</h3>
+                <div class="menu-grid">
+                    <div class="menu-item-card">
+                        <span class="premium-badge">Most Loved</span>
+                        <div class="item-img" style="background-image: url('Alu Roll.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Alu Roll</h4>
+                            <p class="price">Rs. 30 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('alu-roll', -1)">-</button>
+                                    <input type="text" id="qty-alu-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('alu-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('alu-roll', 'Alu Roll', 30)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('vegetable-roll_9434.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Vegetable Roll</h4>
+                            <p class="price">Rs. 40 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('vegetable-roll', -1)">-</button>
+                                    <input type="text" id="qty-vegetable-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('vegetable-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('vegetable-roll', 'Vegetable Roll', 40)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('230814_Chicken-Egg-Rolls_550.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Chicken Roll</h4>
+                            <p class="price">Rs. 50 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('chicken-roll', -1)">-</button>
+                                    <input type="text" id="qty-chicken-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('chicken-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('chicken-roll', 'Chicken Roll', 50)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paratha Hub -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-bread-slice"></i> Paratha Hub</h3>
+                <div class="menu-grid">
+                    <div class="menu-item-card">
+                        <span class="premium-badge">New Arrival</span>
+                        <div class="item-img" style="background-image: url('alu-paratha.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Alu Paratha</h4>
+                            <p class="price">Rs. 150 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('alu-paratha', -1)">-</button>
+                                    <input type="text" id="qty-alu-paratha" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('alu-paratha', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('alu-paratha', 'Alu Paratha', 150)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crispy Corner -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-fire"></i> Crispy Corner</h3>
+                <div class="menu-grid">
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('Shammi.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Shami Kabab <span class="badge-small">Ready to Eat</span></h4>
+                            <p class="price">Rs. 120 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('shami-kabab', -1)">-</button>
+                                    <input type="text" id="qty-shami-kabab" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('shami-kabab', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('shami-kabab', 'Shami Kabab', 120)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('aloo_tikki_potato_cutlet_recipe.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Alu Tikkiya/Cutlets</h4>
+                            <p class="price">Rs. 80 <span class="unit">(per piece)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('alu-tikkiya', -1)">-</button>
+                                    <input type="text" id="qty-alu-tikkiya" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('alu-tikkiya', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('alu-tikkiya', 'Alu Tikkiya', 80)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1576107232684-1279f390859f?w=600&auto=format&fit=crop');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Golden Fries</h4>
+                            <p class="price">Rs. 80 <span class="unit">(Regular)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('golden-fries', -1)">-</button>
+                                    <input type="text" id="qty-golden-fries" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('golden-fries', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('golden-fries', 'Golden Fries', 80)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meals & Sides -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-hamburger"></i> Meals & Sides</h3>
+                <div class="menu-grid">
+                    <div class="menu-item-card">
+                        <span class="premium-badge">Chef's Special</span>
+                        <div class="item-img" style="background-image: url('images.jfif');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Special Shami Burger <span class="badge-small">Street Style</span></h4>
+                            <p class="price">Rs. 200 <span class="unit"></span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('shami-burger', -1)">-</button>
+                                    <input type="text" id="qty-shami-burger" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('shami-burger', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('shami-burger', 'Special Shami Burger', 200)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('istockphoto-685523376-612x612.png');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Club Sandwich <span class="badge-small">with Fries</span></h4>
+                            <p class="price">Rs. 450 <span class="unit"></span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('club-sandwich', -1)">-</button>
+                                    <input type="text" id="qty-club-sandwich" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('club-sandwich', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('club-sandwich', 'Club Sandwich', 450)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img"
+                            style="background-image: url('450c6b233460363.Y3JvcCwyMDQ4LDE2MDEsMCwyMjM.jpg');">
+                        </div>
+                        <div class="item-content">
+                            <h4>Next Cola <span class="badge-small">Chilled</span></h4>
+                            <p class="price">Rs. 220 <span class="unit"></span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('next-cola', -1)">-</button>
+                                    <input type="text" id="qty-next-cola" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('next-cola', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('next-cola', 'Next Cola', 220)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frozen Products -->
+            <div class="menu-category">
+                <h3 class="category-title"><i class="fa-solid fa-snowflake"></i> Frozen Products</h3>
+                <div class="menu-grid">
+                    <!-- Frozen Samosas -->
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Mini Alu Samosa</h4>
+                            <p class="price">Rs. 300 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-samosa', -1)">-</button>
+                                    <input type="text" id="qty-frozen-alu-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-alu-samosa', 'Frozen Mini Alu Samosa (12pcs)', 300)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Vegetable Samosa</h4>
+                            <p class="price">Rs. 400 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-samosa', -1)">-</button>
+                                    <input type="text" id="qty-frozen-veg-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-veg-samosa', 'Frozen Veg Samosa (12pcs)', 400)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-samosa.png');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Chicken Samosa</h4>
+                            <p class="price">Rs. 500 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-samosa', -1)">-</button>
+                                    <input type="text" id="qty-frozen-chk-samosa" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-samosa', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-chk-samosa', 'Frozen Chicken Samosa (12pcs)', 500)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Frozen Rolls -->
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Mini Alu Roll</h4>
+                            <p class="price">Rs. 300 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-roll', -1)">-</button>
+                                    <input type="text" id="qty-frozen-alu-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-alu-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-alu-roll', 'Frozen Mini Alu Roll (12pcs)', 300)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Vegetable Roll</h4>
+                            <p class="price">Rs. 400 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-roll', -1)">-</button>
+                                    <input type="text" id="qty-frozen-veg-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-veg-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-veg-roll', 'Frozen Veg Roll (12pcs)', 400)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-roll.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Chicken Roll</h4>
+                            <p class="price">Rs. 500 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-roll', -1)">-</button>
+                                    <input type="text" id="qty-frozen-chk-roll" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-chk-roll', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-chk-roll', 'Frozen Chicken Roll (12pcs)', 500)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Frozen Shami -->
+                    <div class="menu-item-card">
+                        <div class="item-img" style="background-image: url('frozen-shami.jpg');"></div>
+                        <div class="item-content">
+                            <h4>Frozen Shami Kabab</h4>
+                            <p class="price">Rs. 1000 <span class="unit">(per dozen)</span></p>
+                            <div class="cart-controls">
+                                <div class="qty-bar">
+                                    <button class="qty-btn" onclick="changeQty('frozen-shami', -1)">-</button>
+                                    <input type="text" id="qty-frozen-shami" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="changeQty('frozen-shami', 1)">+</button>
+                                </div>
+                                <button class="add-to-cart-btn"
+                                    onclick="addToCart('frozen-shami', 'Frozen Shami (12pcs)', 1000)"><i
+                                        class="fa-solid fa-cart-shopping"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. Our Hygiene Promise -->
+    <section class="promise-section py-large">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Hygiene Promise</h2>
+                <div class="divider"></div>
+                <p>We prioritize your health without compromising on taste.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3>Premium Cooking Oil Only</h3>
+                    <p>We strictly use high-quality, branded cooking oils for every preparation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3>No Artificial Additives</h3>
+                    <p>Completely free from artificial colors, preservatives, or harmful chemicals.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-house-chimney-user"></i>
+                    </div>
+                    <h3>100% Home Kitchen</h3>
+                    <p>Prepared in a spotless home kitchen environment reflecting motherly care.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 4. Delivery Policy Banner -->
+    <section class="delivery-banner" style="text-align: center; padding: 2rem 0; background: var(--light);">
+        <div class="container">
+            <img src="delivery6-logo2.png" alt="Delivery Information"
+                style="max-width: 100%; max-height: 200px; border-radius: 8px; box-shadow: var(--shadow-sm);">
+            <h3 style="margin-top: 15px; color: var(--dark); font-family: var(--font-heading);">Fast & Fresh Delivery
+            </h3>
+            <p style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">Min Order: Rs. 350 | Flat Rs. 150
+                Delivery | <span style="color: var(--accent);">Free Delivery on Orders Over Rs. 1000!</span></p>
+        </div>
+    </section>
+
+    <!-- 5. Customer Reviews -->
+    <section class="reviews-section py-large bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Verified Reviews</h2>
+                <div class="divider"></div>
+                <p>What our happy customers are saying about us.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The Samosas are exactly like home! Very crispy and hygienic. Highly
+                        recommended."</p>
+                    <div class="reviewer">
+                        <h4>Ayesha K.</h4>
+                        <span class="badge-small">Verified Buyer <i class="fa-solid fa-check-circle"></i></span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Tried the Special Shami Burger and it was phenomenal. Fresh ingredients and
+                        amazing taste!"</p>
+                    <div class="reviewer">
+                        <h4>Usman R.</h4>
+                        <span class="badge-small">Verified Buyer <i class="fa-solid fa-check-circle"></i></span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Their rolls are the best in Lahore. The packaging was neat and delivery was
+                        right on time."</p>
+                    <div class="reviewer">
+                        <h4>Fatima M.</h4>
+                        <span class="badge-small">Verified Buyer <i class="fa-solid fa-check-circle"></i></span>
+                    </div>
+                </div>
+                <!-- New Review 1: Alu Paratha -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The Alu Paratha is a must-try! Perfectly stuffed and tastes like a proper
+                        Desi breakfast. 10/10!"</p>
+                    <div class="reviewer">
+                        <h4>Zainab H.</h4>
+                        <span class="badge-small">Verified Buyer <i class="fa-solid fa-check-circle"></i></span>
+                    </div>
+                </div>
+                <!-- New Review 2: Frozen Products -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Love the frozen samosas. They are so convenient for tea time and taste just
+                        as fresh when fried at home."</p>
+                    <div class="reviewer">
+                        <h4>Bilal S.</h4>
+                        <span class="badge-small">Verified Buyer <i class="fa-solid fa-check-circle"></i></span>
+                    </div>
+                </div>
+                <!-- New Review 3: Club Sandwich -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The Club Sandwich with fries is a great meal. Very filling and the quality
+                        of chicken is excellent."</p>
+                    <div class="reviewer">
+                        <h4>Mariam A.</h4>
+                        <span class="badge-small">Verified Buyer <i class="fa-solid fa-check-circle"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <!-- Using an img tag for the uploaded logo in footer too -->
+            <img src="LOGO-removebg-preview.png" alt="Wadiya Khaba Logo" class="footer-logo"
+                onerror="this.outerHTML='<h3 class=\'footer-brand\'>Wadiya Khaba</h3>';">
+            <p class="footer-tagline">Ghar Ka Zaiqa, Mukammal Safai Ke Sath!</p>
+
+            <div class="contact-info mt-4">
+                <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/923701431247"
+                        class="footer-link">03701431247</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Delivery Areas: Shahdara, Begum Kot, Jia Musa</p>
+                <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:asoffical50@gmail.com"
+                        class="footer-link">asoffical50@gmail.com</a></p>
+            </div>
+
+            <p class="copyright mt-4">&copy; 2026 Wadiya Khaba. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923701431247" class="float-wa" target="_blank" title="Order on WhatsApp">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- Floating Cart Bar -->
+    <div id="cart-floating-bar" class="cart-floating-bar" style="display: none;" onclick="toggleCart()">
+        <div class="cart-info">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0 Items</span>
+            <span class="cart-divider">|</span>
+            <span id="cart-total" class="cart-total-price">Rs. 0</span>
+        </div>
+        <button class="btn-view-cart">View Cart <i class="fa-solid fa-chevron-up"></i></button>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cart-items-container" class="cart-items-container">
+            <!-- Items will be injected here -->
+            <p class="empty-cart-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="drawer-subtotal">Rs. 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>Delivery Charge:</span>
+                    <span id="drawer-delivery">Rs. 0</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Grand Total:</span>
+                    <span id="drawer-total">Rs. 0</span>
+                </div>
+            </div>
+            <button class="btn-checkout-final" onclick="checkoutWhatsApp()">
+                Checkout on WhatsApp <i class="fab fa-whatsapp"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
