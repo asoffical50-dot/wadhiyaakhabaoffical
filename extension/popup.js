@@ -3,6 +3,6 @@ document.getElementById('btn-wa').addEventListener('click', () => {
 });
 
 document.getElementById('btn-web').addEventListener('click', () => {
-    // GitHub repository URLs use hyphens instead of spaces
-    window.open('https://asoffical50.github.io/Wadhiya-Khaba-Home-Food/', '_blank');
+    // Netlify permanent link
+    window.open('https://wadhiyaakhabaoffical.netlify.app/', '_blank');
 });
