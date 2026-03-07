@@ -3,6 +3,6 @@ document.getElementById('btn-wa').addEventListener('click', () => {
 });
 
 document.getElementById('btn-web').addEventListener('click', () => {
-    // Netlify permanent link
-    window.open('https://wadhiyaakhabaoffical.netlify.app/', '_blank');
+    // GitHub Pages link
+    window.open('https://asoffical50-dot.github.io/wadhiyaakhabaoffical/', '_blank');
 });
