@@ -36,7 +36,7 @@ function Optimize-Image {
     Write-Host "Optimized: $Path"
 }
 
-$images = @("Pack of 6 Vegetable Samosa.jpg", "Pack of 6 Vegetable Roll.jpg")
+$images = @("Pack of 6 Vegetable Samosa.jpg", "Pack of 6 Vegetable Roll.jpg", "pack of 6 vegetable samosa.jpg")
 foreach ($img in $images) {
     if (Test-Path $img) {
         Optimize-Image -Path $img
